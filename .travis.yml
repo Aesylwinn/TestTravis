@@ -2,21 +2,23 @@ language: cpp
 matrix:
     include:
         - os: linux
-          apt:
-            sources:
-                - ubuntu-toolchain-r-test
-            packages:
-                - g++-6
+          addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                packages:
+                    - g++-6
           env:
             - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
 
         - os: linux
-          apt:
-            sources:
-                - ubuntu-toolchain-r-test
-                - llvm-toolchain-precise-3.6
-            packages:
-                - clang-3.4
+          addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                    - llvm-toolchain-precise-3.6
+                packages:
+                    - clang-3.4
           env:
             - MATRIX_EVAL="CC=clang-3.4 && CXX=clang++-3.4"
 before_install:
