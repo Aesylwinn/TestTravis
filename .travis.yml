@@ -16,7 +16,7 @@ matrix:
             apt:
                 sources:
                     - ubuntu-toolchain-r-test
-                    - llvm-toolchain-precise-3.6
+                    - llvm-toolchain-precise-3.4
                 packages:
                     - clang-3.4
           env:
