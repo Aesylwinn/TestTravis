@@ -17,8 +17,6 @@ before_install:
     - cd build 
     - cmake ../
 script:
-    - cd build
     - make
 after_script:
-    - cd build
     - ./Test
